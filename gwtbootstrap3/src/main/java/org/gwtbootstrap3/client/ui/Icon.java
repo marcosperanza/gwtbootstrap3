@@ -80,6 +80,11 @@ public class Icon extends ComplexWidget implements HasType<IconType>, HasSize<Ic
         }
     }
 
+    public IconType.Style getIconStyle() {
+        return IconType.Style.fromStyleName(getStyleName());
+    }
+
+
     @Override
     public IconType getType() {
         return IconType.fromStyleName(getStyleName());

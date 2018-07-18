@@ -263,6 +263,15 @@ public class CheckBoxButton extends CheckBox implements HasActive,
     }
 
     @Override
+    public IconType.Style getIconStyle() {
+        Icon actualIcon = getActualIcon();
+        if (actualIcon != null) {
+            return actualIcon.getIconStyle();
+        }
+        return null;
+    }
+
+    @Override
     public IconType getIcon() {
         return getActualIcon().getType();
     }

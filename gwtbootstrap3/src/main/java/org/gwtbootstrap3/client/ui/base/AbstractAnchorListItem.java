@@ -228,6 +228,11 @@ public abstract class AbstractAnchorListItem extends AbstractListItem implements
         anchor.setIconStyle(style);
     }
 
+    @Override
+    public IconType.Style getIconStyle() {
+        return anchor.getIconStyle();
+    }
+
     /** {@inheritDoc} */
     @Override
     public void setIconBordered(final boolean iconBordered) {

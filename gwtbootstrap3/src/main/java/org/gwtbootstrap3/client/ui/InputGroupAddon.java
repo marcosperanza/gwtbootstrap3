@@ -85,6 +85,11 @@ public class InputGroupAddon extends AbstractInputGroupAddon implements HasText,
     }
 
     @Override
+    public IconType.Style getIconStyle() {
+        return iconTextMixin.getIconStyle();
+    }
+
+    @Override
     public IconType getIcon() {
         return iconTextMixin.getIcon();
     }

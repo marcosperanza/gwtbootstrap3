@@ -29,11 +29,18 @@ import com.google.gwt.dom.client.Style;
  */
 public enum IconSize implements Size, Style.HasCssName {
     NONE(""),
+    XSMALL("fa-xs"),
+    SMALL("fa-sm"),
     LARGE("fa-lg"),
     TIMES2("fa-2x"),
     TIMES3("fa-3x"),
     TIMES4("fa-4x"),
-    TIMES5("fa-5x");
+    TIMES5("fa-5x"),
+    TIMES6("fa-6x"),
+    TIMES7("fa-7x"),
+    TIMES8("fa-8x"),
+    TIMES9("fa-9x"),
+    TIMES10("fa-10x");
 
     private final String cssClass;
 

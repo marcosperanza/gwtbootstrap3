@@ -98,6 +98,11 @@ public class IconTextMixin<T extends ComplexWidget & HasText & HasIcon & HasIcon
     }
 
     @Override
+    public IconType.Style getIconStyle() {
+        return icon == null ? null : icon.getIconStyle();
+    }
+
+    @Override
     public IconType getIcon() {
         return icon == null ? null : icon.getType();
     }

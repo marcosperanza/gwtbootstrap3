@@ -35,6 +35,8 @@ public interface HasIcon {
 
     void setIconStyle(IconType.Style style);
 
+    IconType.Style getIconStyle();
+
     void setIcon(IconType iconType);
 
     IconType getIcon();

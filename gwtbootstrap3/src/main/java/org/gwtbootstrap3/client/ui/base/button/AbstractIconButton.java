@@ -73,6 +73,11 @@ public abstract class AbstractIconButton extends AbstractButton implements HasTe
     }
 
     @Override
+    public IconType.Style getIconStyle() {
+        return iconTextMixin.getIconStyle();
+    }
+
+    @Override
     public IconType getIcon() {
         return iconTextMixin.getIcon();
     }

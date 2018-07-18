@@ -389,10 +389,18 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <!-- Internal distribution repository -->
     <distributionManagement>
+        <repository>
+            <id>artifactory</id>
+            <name>artifactory-releases</name>
+            <url>http://rdstorage/artifactory/libs-release-local</url>
+        </repository>
+
         <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>artifactory</id>
+            <name>artifactory-snapshots</name>
+            <url>http://rdstorage/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 

@@ -1180,5 +1180,9 @@ public enum IconType implements Type, Style.HasCssName {
         public String getCssName() {
             return cssName;
         }
+
+        public static IconType.Style fromStyleName(final String styleName) {
+            return EnumHelper.fromStyleName(styleName, IconType.Style.class, null);
+        }
     }
 }

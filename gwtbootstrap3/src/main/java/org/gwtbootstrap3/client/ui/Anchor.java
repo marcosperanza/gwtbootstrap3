@@ -163,6 +163,11 @@ public class Anchor extends ComplexWidget implements HasEnabled, HasClickHandler
         iconTextMixin.setIconStyle(style);
     }
 
+    @Override
+    public IconType.Style getIconStyle() {
+        return iconTextMixin.getIconStyle();
+    }
+
     /**
      * {@inheritDoc}
      */
