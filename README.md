@@ -20,7 +20,11 @@ You can easily add GWTBootstrap3 to your project by including the library as a M
 * [Supported Features](https://github.com/gwtbootstrap3/gwtbootstrap3/wiki/Supported-Features) - Current releases supported features.
 
 ### Current Snapshot
-* 1.0-SNAPSHOT
+* 1.1-SNAPSHOT
+  * Font Awesome v 5.1.1
+  * Added [Layering, Text, & Counters](https://fontawesome.com/how-to-use/on-the-web/styling/layering)  
+*
+* For demos refers to official projects:
 * [Snapshot Demo](http://gwtbootstrap3.github.io/gwtbootstrap3-demo/snapshot) - GWTBootstrap3 v1.0-SNAPSHOT Demo. (Updated after every commit)
 * [API Docs](http://gwtbootstrap3.github.io/gwtbootstrap3-demo/snapshot/apidocs) - GWTBootstrap3 v1.0-SNAPSHOT Javadoc. (Updated after every commit)
 

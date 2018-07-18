@@ -20,10 +20,7 @@ package org.gwtbootstrap3.client.ui;
  * #L%
  */
 
-import org.gwtbootstrap3.client.ui.base.ComplexWidget;
-import org.gwtbootstrap3.client.ui.base.HasEmphasis;
-import org.gwtbootstrap3.client.ui.base.HasSize;
-import org.gwtbootstrap3.client.ui.base.HasType;
+import org.gwtbootstrap3.client.ui.base.*;
 import org.gwtbootstrap3.client.ui.base.helper.StyleHelper;
 import org.gwtbootstrap3.client.ui.constants.ElementTags;
 import org.gwtbootstrap3.client.ui.constants.Emphasis;
@@ -47,7 +44,7 @@ import com.google.gwt.uibinder.client.UiConstructor;
  * @see org.gwtbootstrap3.client.ui.constants.IconType
  * @see org.gwtbootstrap3.client.ui.constants.IconSize
  */
-public class Icon extends ComplexWidget implements HasType<IconType>, HasSize<IconSize>, HasEmphasis, HasClickHandlers {
+public class Icon extends ComplexWidget implements HasType<IconType>, HasSize<IconSize>, HasEmphasis, HasClickHandlers, HasTransform, HasInverse {
 
     final private String DEFAULT_STYLE = IconType.Style.SOLID.getCssName();
 
@@ -122,10 +119,12 @@ public class Icon extends ComplexWidget implements HasType<IconType>, HasSize<Ic
         return StyleHelper.containsStyle(Styles.ICON_STACK_TOP, getStyleName());
     }
 
+    @Override
     public void setInverse(final boolean inverse) {
         StyleHelper.toggleStyleName(this, inverse, Styles.ICON_INVERSE);
     }
 
+    @Override
     public boolean isInverse() {
         return StyleHelper.containsStyle(Styles.ICON_INVERSE, getStyleName());
     }
@@ -192,5 +191,15 @@ public class Icon extends ComplexWidget implements HasType<IconType>, HasSize<Ic
     @Override
     public HandlerRegistration addClickHandler(final ClickHandler handler) {
         return addDomHandler(handler, ClickEvent.getType());
+    }
+
+    @Override
+    public void setTransform(String value) {
+        getElement().setAttribute(Styles.DATA_FA_TRANSFORM, value);
+    }
+
+    @Override
+    public String getTransform() {
+        return getElement().getAttribute(Styles.DATA_FA_TRANSFORM);
     }
 }

@@ -34,6 +34,7 @@ public class GwtTestSuite extends TestCase {
         suite.addTestSuite(CheckBoxButtonGwt.class);
         suite.addTestSuite(RadioButtonGwt.class);
         suite.addTestSuite(ButtonGwt.class);
+        suite.addTestSuite(IconLayerGwt.class);
         suite.addTestSuite(ValidatorsGwt.class);
         return suite;
     }
