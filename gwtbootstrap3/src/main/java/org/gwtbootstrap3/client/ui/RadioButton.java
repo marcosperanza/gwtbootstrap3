@@ -296,6 +296,13 @@ public class RadioButton extends Radio implements HasActive,
     }
 
     @Override
+    public void setIconStyle(IconType.Style style) {
+        Icon actualIcon = getActualIcon();
+        if (actualIcon != null) {
+            actualIcon.setIconStyle(style);
+        }    }
+
+    @Override
     public IconType getIcon() {
         return getActualIcon().getType();
     }

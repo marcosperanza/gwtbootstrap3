@@ -32,6 +32,9 @@ import org.gwtbootstrap3.client.ui.constants.IconType;
  * @author Joshua Godi
  */
 public interface HasIcon {
+
+    void setIconStyle(IconType.Style style);
+
     void setIcon(IconType iconType);
 
     IconType getIcon();

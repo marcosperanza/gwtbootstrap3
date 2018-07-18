@@ -111,7 +111,7 @@ public class ButtonCell extends com.google.gwt.cell.client.ButtonCell implements
         sb.appendHtmlConstant("<button type=\"button\" class=\"" + cssClasses + "\" tabindex=\"-1\"" + disabled + ">");
         if (icon != null) {
             String iconHtml = new StringBuilder("<i class=\"") //
-                    .append(Styles.FONT_AWESOME_BASE) //
+                    .append(IconType.Style.LEGACY.getCssName()) //
                     .append(" ") //
                     .append(icon.getCssName()) //
                     .append("\"></i> ") //

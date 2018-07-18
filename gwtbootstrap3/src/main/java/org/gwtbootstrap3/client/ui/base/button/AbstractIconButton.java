@@ -20,6 +20,7 @@ package org.gwtbootstrap3.client.ui.base.button;
  * #L%
  */
 
+import com.google.gwt.dom.client.Element;
 import org.gwtbootstrap3.client.ui.base.HasBadge;
 import org.gwtbootstrap3.client.ui.base.HasIcon;
 import org.gwtbootstrap3.client.ui.base.HasIconPosition;
@@ -64,6 +65,11 @@ public abstract class AbstractIconButton extends AbstractButton implements HasTe
     @Override
     public void setIcon(final IconType iconType) {
         iconTextMixin.setIcon(iconType);
+    }
+
+    @Override
+    public void setIconStyle(IconType.Style style) {
+        iconTextMixin.setIconStyle(style);
     }
 
     @Override

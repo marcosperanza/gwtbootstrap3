@@ -49,9 +49,16 @@ import com.google.gwt.uibinder.client.UiConstructor;
  */
 public class Icon extends ComplexWidget implements HasType<IconType>, HasSize<IconSize>, HasEmphasis, HasClickHandlers {
 
+    final private String DEFAULT_STYLE = IconType.Style.SOLID.getCssName();
+
     public Icon() {
         setElement(Document.get().createElement(ElementTags.I));
-        addStyleName(Styles.FONT_AWESOME_BASE);
+        addStyleName(DEFAULT_STYLE);
+    }
+
+    public Icon(IconType.Style style) {
+        setElement(Document.get().createElement(ElementTags.I));
+        addStyleName(style == null ? DEFAULT_STYLE : style.getCssName());
     }
 
     @UiConstructor
@@ -63,6 +70,14 @@ public class Icon extends ComplexWidget implements HasType<IconType>, HasSize<Ic
     @Override
     public void setType(final IconType type) {
         StyleHelper.addUniqueEnumStyleName(this, IconType.class, type);
+    }
+
+    public void setIconStyle(IconType.Style style) {
+        if (getType() != null) {
+            //put the icon style in first position.
+            StyleHelper.addUniqueEnumStyleName(this, IconType.Style.class, style);
+            setType(getType());
+        }
     }
 
     @Override

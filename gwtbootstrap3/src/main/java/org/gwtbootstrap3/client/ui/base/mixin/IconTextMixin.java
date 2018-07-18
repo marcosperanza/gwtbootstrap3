@@ -52,6 +52,7 @@ public class IconTextMixin<T extends ComplexWidget & HasText & HasIcon & HasIcon
     private final Text badgeSeparator = new Text(" ");
     private Icon icon;
     private IconType iconType;
+    private IconType.Style iconStyle;
     private IconPosition iconPosition = IconPosition.LEFT;
     private IconSize iconSize = IconSize.NONE;
     private IconFlip iconFlip = IconFlip.NONE;
@@ -87,6 +88,12 @@ public class IconTextMixin<T extends ComplexWidget & HasText & HasIcon & HasIcon
     @Override
     public void setIcon(final IconType iconType) {
         this.iconType = iconType;
+        render();
+    }
+
+    @Override
+    public void setIconStyle(IconType.Style style) {
+        this.iconStyle = style;
         render();
     }
 
@@ -244,7 +251,7 @@ public class IconTextMixin<T extends ComplexWidget & HasText & HasIcon & HasIcon
                 }
 
                 if (iconType != null) {
-                    icon = new Icon();
+                    icon = new Icon(iconStyle);
                     icon.setType(iconType);
                     icon.setSize(iconSize);
                     icon.setFlip(iconFlip);

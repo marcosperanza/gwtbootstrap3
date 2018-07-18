@@ -81,7 +81,7 @@ public class HelpBlock extends AbstractTextWidget {
      */
     protected Element createIconElement() {
         Element e = Document.get().createElement(ElementTags.I);
-        e.addClassName(Styles.FONT_AWESOME_BASE);
+        e.addClassName(IconType.Style.LEGACY.getCssName());
         e.addClassName(iconType.getCssName());
         e.getStyle().setPaddingRight(5, Unit.PX);
         return e;

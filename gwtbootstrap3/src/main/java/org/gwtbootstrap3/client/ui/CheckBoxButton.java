@@ -20,6 +20,7 @@ package org.gwtbootstrap3.client.ui;
  * #L%
  */
 
+import com.google.gwt.user.client.ui.Widget;
 import org.gwtbootstrap3.client.ui.base.HasActive;
 import org.gwtbootstrap3.client.ui.base.HasIcon;
 import org.gwtbootstrap3.client.ui.base.HasIconPosition;
@@ -251,6 +252,14 @@ public class CheckBoxButton extends CheckBox implements HasActive,
     @Override
     public void setIcon(IconType iconType) {
         getActualIcon().setType(iconType);
+    }
+
+    @Override
+    public void setIconStyle(IconType.Style style) {
+        Icon actualIcon = getActualIcon();
+        if (actualIcon != null) {
+            actualIcon.setIconStyle(style);
+        }
     }
 
     @Override
